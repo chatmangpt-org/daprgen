@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.583" timestamp="2024-05-18T20:47:40.977328" hostname="Seans-MBP.attlocal.net"><testcase classname="" name="tests.ghl_calendar.test_ghl_calendar_service" time="0.000"><error message="collection failure">ImportError while importing test module '/Users/sac/dev/daprgen/tests/ghl_calendar/test_ghl_calendar_service.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../Library/Caches/pypoetry/virtualenvs/daprgen-JvFDLnNN-py3.11/lib/python3.11/site-packages/_pytest/python.py:487: in importtestmodule
+    mod = import_path(
+../../Library/Caches/pypoetry/virtualenvs/daprgen-JvFDLnNN-py3.11/lib/python3.11/site-packages/_pytest/pathlib.py:591: in import_path
+    importlib.import_module(module_name)
+../../.pyenv/versions/3.11.4/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1204: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1176: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1147: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:690: in _load_unlocked
+    ???
+../../Library/Caches/pypoetry/virtualenvs/daprgen-JvFDLnNN-py3.11/lib/python3.11/site-packages/_pytest/assertion/rewrite.py:178: in exec_module
+    exec(co, module.__dict__)
+tests/ghl_calendar/test_ghl_calendar_service.py:6: in &lt;module&gt;
+    from conftest import (GroupDTOFactory, ValidateGroupSlugPostBodyFactory, GroupUpdateDTOFactory,
+E   ModuleNotFoundError: No module named 'conftest'</error></testcase></testsuite></testsuites>
