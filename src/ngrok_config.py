@@ -13,6 +13,7 @@ def create_ngrok_tunnel(domain: str, port: int) -> str:
         options["hostname"] = domain
 
     try:
+        ngrok.kill()
         tunnel = ngrok.connect(**options)
         public_url = tunnel.public_url
         logger.info(f"ngrok tunnel opened at {public_url}")

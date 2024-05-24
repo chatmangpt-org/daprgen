@@ -12,5 +12,3 @@ calendar.timegm = timegm
 # Ensure the patch is applied
 assert calendar.timegm is timegm
 """daprgen test suite."""
-
-print("Monkey patching calendar.timegm()...")

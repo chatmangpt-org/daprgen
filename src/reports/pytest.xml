@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.261" timestamp="2024-05-20T11:11:56.287069" hostname="Seans-MBP.attlocal.net"><testcase classname="tests.test_ghl" name="test_decrypt_sso" time="0.019"><failure message="TypeError: 'async_generator' object does not support the asynchronous context manager protocol">async_client = &lt;async_generator object async_client at 0x107c85700&gt;
+httpx_mock = &lt;pytest_httpx._httpx_mock.HTTPXMock object at 0x107cd6910&gt;
+mocker = &lt;pytest_mock.plugin.MockerFixture object at 0x107d20e10&gt;
+
+    @pytest.mark.asyncio
+    async def test_decrypt_sso(async_client, httpx_mock: HTTPXMock, mocker):
+        # Mock the decryption process
+        mocker.patch("daprgen.ghl.GHL.decrypt_sso_data", return_value={"user": "test_user"})
+    
+        # Test the decrypt SSO endpoint
+&gt;       async with async_client as client:
+E       TypeError: 'async_generator' object does not support the asynchronous context manager protocol
+
+../tests/test_ghl.py:132: TypeError</failure></testcase></testsuite></testsuites>

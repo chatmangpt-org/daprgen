@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.583" timestamp="2024-05-18T20:47:40.977328" hostname="Seans-MBP.attlocal.net"><testcase classname="" name="tests.ghl_calendar.test_ghl_calendar_service" time="0.000"><error message="collection failure">ImportError while importing test module '/Users/sac/dev/daprgen/tests/ghl_calendar/test_ghl_calendar_service.py'.
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.583" timestamp="2024-05-18T20:47:40.977328" hostname="Seans-MBP.attlocal.net"><testcase classname="" name="tests.ghl_calendar.test_ghl_calendar_service" time="0.000"><error message="collection failure">ImportError while importing test module '/Users/sac/dev/daprgen/tests/v1_calendar/test_ghl_calendar_service.py'.
 Hint: make sure your test modules/packages have valid Python names.
 Traceback:
 ../../Library/Caches/pypoetry/virtualenvs/daprgen-JvFDLnNN-py3.11/lib/python3.11/site-packages/_pytest/python.py:487: in importtestmodule
@@ -17,6 +17,6 @@ Traceback:
     ???
 ../../Library/Caches/pypoetry/virtualenvs/daprgen-JvFDLnNN-py3.11/lib/python3.11/site-packages/_pytest/assertion/rewrite.py:178: in exec_module
     exec(co, module.__dict__)
-tests/ghl_calendar/test_ghl_calendar_service.py:6: in &lt;module&gt;
+tests/v1_calendar/test_ghl_calendar_service.py:6: in &lt;module&gt;
     from conftest import (GroupDTOFactory, ValidateGroupSlugPostBodyFactory, GroupUpdateDTOFactory,
 E   ModuleNotFoundError: No module named 'conftest'</error></testcase></testsuite></testsuites>

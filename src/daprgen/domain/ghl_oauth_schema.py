@@ -2,7 +2,6 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 
 
-
 class BadRequestDTO(BaseModel):
     status_code: float = Field(0, alias="statusCode",
                                description="The HTTP status code representing the type of error.")
@@ -85,24 +84,39 @@ class GetInstalledLocationsSuccessfulResponseDTO(BaseModel):
 
 class GetAccessTokenPostParams(BaseModel):
     client_id: str = Field(..., title="Client ID", description="The ID provided by GHL for your integration")
-    client_secret: str = Field(..., title="Client Secret", description="The secret provided by GHL for your integration")
-    grant_type: str = Field(..., title="Grant Type", description="Type of grant requested", example="authorization_code", enum=["authorization_code", "refresh_token"])
-    code: Optional[str] = Field(None, title="Authorization Code", description="The authorization code received from the authorization server")
-    refresh_token: Optional[str] = Field(None, title="Refresh Token", description="The refresh token received from a previous authorization")
-    user_type: Optional[str] = Field(None, title="User Type", description="The type of token to be requested", enum=["Company", "Location"], example="Location")
-    redirect_uri: Optional[str] = Field(None, title="Redirect URI", description="The redirect URI for your application", example="https://myapp.com/oauth/callback/gohighlevel")
+    client_secret: str = Field(..., title="Client Secret",
+                               description="The secret provided by GHL for your integration")
+    grant_type: str = Field(..., title="Grant Type", description="Type of grant requested",
+                            example="authorization_code", enum=["authorization_code", "refresh_token"])
+    code: Optional[str] = Field(None, title="Authorization Code",
+                                description="The authorization code received from the authorization server")
+    refresh_token: Optional[str] = Field(None, title="Refresh Token",
+                                         description="The refresh token received from a previous authorization")
+    user_type: Optional[str] = Field(None, title="User Type", description="The type of token to be requested",
+                                     enum=["Company", "Location"], example="Location")
+    redirect_uri: Optional[str] = Field(None, title="Redirect URI", description="The redirect URI for your application",
+                                        example="https://myapp.com/oauth/callback/gohighlevel")
 
 
 class GetLocationAccessTokenPostParams(BaseModel):
     companyId: str = Field(..., title="Company ID", description="Company Id of location you want to request token for")
-    locationId: str = Field(..., title="Location ID", description="The location ID for which you want to obtain accessToken")
+    locationId: str = Field(..., title="Location ID",
+                            description="The location ID for which you want to obtain accessToken")
     version: str = Field(..., title="API Version", description="API Version", example="2021-07-28")
 
 
 class GetInstalledLocationsGetParams(BaseModel):
-    appId: str = Field(..., title="App ID", description="Parameter to search by the appId", example="tDtDnQdgm2LXpyiqYvZ6")
-    companyId: str = Field(..., title="Company ID", description="Parameter to search by the companyId", example="tDtDnQdgm2LXpyiqYvZ6")
-    isInstalled: Optional[bool] = Field(None, title="Is Installed", description="Filters out locations which are installed for specified app under the specified company", example=True)
-    limit: Optional[int] = Field(20, title="Limit", description="Parameter to limit the number of installed locations", example=10)
-    query: Optional[str] = Field(None, title="Query", description="Parameter to search for the installed location by name", example="location name")
-    skip: Optional[int] = Field(0, title="Skip", description="Parameter to skip the number of installed locations", example=1)
+    appId: str = Field(..., title="App ID", description="Parameter to search by the appId",
+                       example="tDtDnQdgm2LXpyiqYvZ6")
+    companyId: str = Field(..., title="Company ID", description="Parameter to search by the companyId",
+                           example="tDtDnQdgm2LXpyiqYvZ6")
+    isInstalled: Optional[bool] = Field(None, title="Is Installed",
+                                        description="Filters out locations which are installed for specified app under the specified company",
+                                        example=True)
+    limit: Optional[int] = Field(20, title="Limit", description="Parameter to limit the number of installed locations",
+                                 example=10)
+    query: Optional[str] = Field(None, title="Query",
+                                 description="Parameter to search for the installed location by name",
+                                 example="location name")
+    skip: Optional[int] = Field(0, title="Skip", description="Parameter to skip the number of installed locations",
+                                example=1)

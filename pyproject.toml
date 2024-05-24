@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]  # https://python-poetry.org/docs/pyproject/
 name = "daprgen"
-version = "0.0.0"
+version = "2024.5.24"
 description = "TODO"
 authors = ["Sean Chatman <info@chatmangpt.com>"]
 readme = "README.md"
@@ -30,6 +30,8 @@ inject = "^5.2.1"
 pytest-vcr = "^1.0.2"
 aiohttp = {extras = ["speedups"], version = "^3.9.5"}
 pyngrok = "^7.1.6"
+pycryptodome = "^3.20.0"
+pytest-httpx = "^0.30.0"
 
 [tool.poetry.group.test.dependencies]  # https://python-poetry.org/docs/master/managing-dependencies/
 coverage = { extras = ["toml"], version = ">=7.4.4" }
